@@ -16,6 +16,7 @@ const getallevents = require("./routes/userRoutes/getAllEvents");
 const getVendorEvent = require("./routes/userRoutes/getVendor");
 const selectEvent = require("./routes/userRoutes/selectEvent");
 const getselections = require("./routes/userRoutes/getSelections");
+// jhfiejfow
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
@@ -25,7 +26,7 @@ mongoose
   .then(() => {
     console.log("Mongoose connected to DB");
     app.listen(process.env.PORT, () => {
-      console.log("Connected to port 3003");
+      console.log("Connected to port " + process.env.PORT);
     });
   })
   .catch((err) => {
